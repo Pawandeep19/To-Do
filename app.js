@@ -5,7 +5,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 methodOverride=require("method-override");
 app.use(methodOverride("_method"));
 var mongoose=require("mongoose");
-mongoose.connect("mongodb+srv://pawandeep19:pawan123@cluster0.qyryo.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true, }).then(()=>{
+mongoose.connect("mongodb+srv://pawandeep19:pawan123@cluster0.qyryo.mongodb.net/To-Do-Database?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true, }).then(()=>{
     console.log("Mongodb connected");
 });
 mongoose.set('useFindAndModify', false);
@@ -50,6 +50,6 @@ app.delete("/",function(req,res){
 })
 
 //listen
-app.listen(process.env.PORT || 30003000,function(){
+app.listen(process.env.PORT || 3000,function(){
     console.log("server started");
 });
