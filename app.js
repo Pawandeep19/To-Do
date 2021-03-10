@@ -6,7 +6,7 @@ methodOverride=require("method-override");
 app.use(methodOverride("_method"));
 var mongoose=require("mongoose");
 mongoose.connect("mongodb+srv://pawandeep19:youaremypassword@cluster0.qyryo.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true, }).then(()=>{
-    console.log("Mongodb connected");
+    console.log("Mongodb is connected");
 });
 mongoose.set('useFindAndModify', false);
 // app.set('view engine', 'ejs');
