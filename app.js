@@ -5,7 +5,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 methodOverride=require("method-override");
 app.use(methodOverride("_method"));
 var mongoose=require("mongoose");
-mongoose.connect("mongodb://localhost/to-do",{ useNewUrlParser: true, useUnifiedTopology: true, });
+mongoose.connect("mongodb+srv://pawandeep19:youaremypassword@cluster0.qyryo.mongodb.net/test",{ useNewUrlParser: true, useUnifiedTopology: true, });
 mongoose.set('useFindAndModify', false);
 // app.set('view engine', 'ejs');
 app.use(express.static(__dirname+"/public"));
