@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<!-- css -->
+	<link rel="stylesheet"  href="/todo.css">
+	<!-- icon pack -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+	<div id="container">
+		<h1>To-Do List <i class="fas fa-bars"></i></h1>
+		<form action="/" method="post">
+			<input type="text" name="item" placeholder="Add New To-Do">
+		</form>
+        <ul>
+			<% for(var i=0;i<foundtodo.length;i++) { %>
+				<li><span>
+					  <i class="fas fa-trash-alt"></i>
+					  <form style="display: none" action="/?_method=DELETE" method="POST" id="form">
+						<input type="text" id="var1" name="var1" value=""/>
+						<input type="hidden" id="var2" name="var2" value=""/>
+					</form>
+					</span> <strong><%=foundtodo[i].todoItem %></strong>
+					
+				</li>
+			<% } %>
+        </ul></div>
+
+
+<!-- js -->
+<script type="text/javascript" src="/todo.js"></script>
+</body>
+</html>

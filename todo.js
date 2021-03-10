@@ -1,3 +1,4 @@
+alert("connected");
 //check-unckeck to-do
 //we get the li inside of ul by passing li as 2nd argument
 //we use on function strictly instead of click function because 
